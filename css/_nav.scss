@@ -1,0 +1,126 @@
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background: #1a2639; 
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+}
+
+#logo{
+    animation: fill 1.5s forwards 1.5s;
+}
+
+@import './logo-animation';
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    list-style: none;
+
+    a{
+        color: #d9dad7;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 20px;
+        &:hover{
+            color: #c24d2c;
+            text-shadow: black;
+            transition: all 1s;
+            animation: zoom 1s forwards;
+        }
+    }
+}
+
+.burger{
+    display: none;
+}
+
+@media screen and (max-width: 1080px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    body{
+        overflow: hidden;
+    }
+
+    .nav-links{
+        width: 100%;
+        position: fixed;
+        height: 25vh;
+        right: 0px;
+        top: 8vh;
+        background-color: #c24d2c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        transform: translateX(0%);
+        transition: transform .3s ease-in;
+
+        li{
+            opacity: 0;
+        }
+    }
+
+    .nav-links.active{
+        transform: translateX(100%);
+    }
+    
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .nav-links a{
+        color: #d9dad7;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 25px;
+        &:hover{
+            color: #3e4a61;
+            text-shadow: black;
+            transition: all 1s;
+            animation: zoom 1s forwards;
+        }
+    }
+
+    .burger{
+        position: absolute;
+        right: 10px;
+        display: block;
+        cursor: pointer;
+        span{
+            font-size: 30px;
+            color: #f0f0f0;
+            &:hover{
+                color: #c24d2c;
+                transition: all .5s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px){
+    .nav-links{
+        width: 45%; 
+        a{
+            font-size: 20px;
+        }
+    }
+}

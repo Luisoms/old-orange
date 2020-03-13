@@ -1,0 +1,17 @@
+#logo path:nth-child(1){
+    stroke-dasharray: 464;
+    stroke-dashoffset: 464;
+    animation: line-anim 1s ease forwards;
+}
+#logo path:nth-child(2){
+    stroke-dasharray: 508;
+    stroke-dashoffset: 508;
+    animation: line-anim 1s ease forwards .5s;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 297;
+    stroke-dashoffset: 297;
+    animation: line-anim 1s ease forwards 1s;
+}
+
+@import './animations';

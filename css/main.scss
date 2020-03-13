@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: #d9dad7; 
+    /*linear-gradient(to bottom, #1e2c3d 30%, #364f6b);*/
+}
+
+.grid-main{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh 1vh 92vh;
+
+    grid-template-areas: "nav"
+                         "form"
+                         "cont";
+}
+@media screen and (max-width: 768px){
+    .grid-main{
+        display: grid;
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: 8vh 1vh 92vh;
+    
+        grid-template-areas: "nav"
+                             "form"
+                             "cont";
+    }
+}
+
+@import './nav';
+
+@import './form';
+
+@import './content';

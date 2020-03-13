@@ -1,0 +1,19 @@
+.content{
+    grid-area: cont;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+    '. .  .  . .'
+    '. a  a  b .'
+    '. a  a  c .'
+    '. d  d  c .'
+    '. .  .  . .';
+
+    grid-template-rows: .5em repeat(3, 1fr) .5em;
+    grid-template-columns: .5em repeat(3, 1fr) .5em;
+
+    --stagger-delay: 200ms;
+}
+
+@import './cards'

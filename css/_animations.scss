@@ -1,0 +1,71 @@
+@keyframes line-anim{
+    from{
+        transform: translateY(30%);
+        filter: hue-rotate(220deg);
+    }
+    to{
+        stroke-dashoffset: 0;
+        filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes fill{
+    from{
+        fill: transparent;
+    }
+    to{
+        fill: #c24d2c;
+    }
+}
+
+
+@keyframes color{
+    from{
+        filter: hue-rotate(220deg);
+    }
+    to{
+        filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes zoom{
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-10%);
+    }
+}
+
+@keyframes cardEntrance {
+    from {
+      opacity: 0;
+      transform: scale(0.7);
+      filter: hue-rotate(-100deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
